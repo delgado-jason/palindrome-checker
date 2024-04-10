@@ -1,0 +1,141 @@
+:root {
+    --font-color: #3A504C;
+    --alt-font-color: #CBF5ED;
+    --accent-color: #0F8EFA;
+    --false-color: #FA190F;
+}
+
+html {
+    font-size: 1rem;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Mono', monospace;
+    background-image: linear-gradient(#10FBD0, #0FFA2F);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 100vh;
+    color: var(--font-color);
+}
+
+.container {
+    margin: 1.5em 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+.container h1 {
+    font-size: 1.25em;
+    font-weight: 700;
+    text-align: center;
+}
+
+.container h3 {
+    font-size: 1em;
+    font-weight: 400;
+    text-align: center;
+}
+
+.checker-form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2em;
+}
+
+.checker-form h4 {
+    font-size: 1.125em;
+    font-weight: 700;
+    text-align: center;
+}
+
+.checker-form input {
+    width: 18em;
+    max-width: 400px;
+    height: 1.875em;
+    margin: 0 auto 1.5em;
+    padding-left: 1em;
+    border: none;
+    border-radius: 1.25em;
+    font-weight: 200;
+    background-color: var(--alt-font-color);
+    color: var(--font-color);
+    text-indent: 1em;
+}
+
+.checker-form input::placeholder {
+    opacity: 60%;
+}
+
+.checker-form button {
+    width: 18em;
+    height: 2.75em;
+    margin: 0 auto;
+    border: none;
+    border-radius: 1.25em;
+    background-color: var(--accent-color);
+    color: var(--alt-font-color);
+    box-shadow: 2px 2px 2px var(--font-color);
+}
+
+.checker-form button:hover {
+    cursor: pointer;
+    background-color: var(--alt-font-color);
+    border: 2px solid var(--accent-color);
+    color: var(--font-color);
+    box-shadow: 4px 4px 4px var(--font-color);
+}
+
+.result h3 {
+    font-size: 1em;
+    font-weight: 400;
+    text-align: center;
+}
+
+.word-style-true {
+    color: var(--accent-color);
+}
+
+.word-style-false {
+    color: var(--false-color);
+}
+
+@media screen and (min-width: 768px) {
+    .container h1 {
+        font-size: 3em;
+    }
+
+    .container h3 {
+        font-size: 2em;
+    }
+
+    .checker-form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 820px;
+        margin: 1em auto;
+        row-gap: 2em;
+    }
+
+    .checker-form h3 {
+        font-size: 1.75em;
+        margin-left: 4em;
+    }
+
+    .checker-form input {
+        display: block;
+        margin: auto auto;
+        width: 400px;
+    }
+
+    .checker-form button {
+        grid-column: 2 / 3;
+        font-size: 1.125em;
+    }
+
+    .result h3 {
+        font-size: 2em;
+    }
+}
