@@ -9,9 +9,15 @@ let isPalindrome;
 
 checkWordBtn.addEventListener('click', (e) => {
     e.preventDefault();
-    word = textInput.value;
-    checkPalindrome(word);
-    displayResult(isPalindrome, word);
+    // Check if text input field is empty
+    if(textInput.value === '' || textInput.value === null) {
+        alert('Please input a value');
+    } else {
+        word = textInput.value;
+        checkPalindrome(word);
+        displayResult(isPalindrome, word);
+    }
+    
 })
 
 const checkPalindrome = (w) => {
