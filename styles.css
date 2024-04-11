@@ -114,7 +114,7 @@ body {
     .checker-form {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        width: 820px;
+        max-width: 80%;
         margin: 1em auto;
         row-gap: 2em;
     }
@@ -131,8 +131,10 @@ body {
     }
 
     .checker-form button {
+        width: 10em;
         grid-column: 2 / 3;
         font-size: 1.125em;
+        margin-left: 13em;
     }
 
     .result h3 {
